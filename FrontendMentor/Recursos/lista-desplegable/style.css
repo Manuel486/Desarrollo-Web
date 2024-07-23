@@ -1,0 +1,21 @@
+body {
+  color: black;
+}
+
+/* Remove the default triangle */
+summary {
+  display: block;
+}
+
+/* Create a new custom triangle on the right side */
+summary::after {
+  margin-left: 1ch;
+  display: inline-block;
+  content: url(assets/arrow-right.svg);
+  vertical-align: middle; /* Centra verticalmente con el texto */
+  transition: 0.2s;
+}
+
+details[open] > summary::after {
+  transform: rotate(90deg);
+}

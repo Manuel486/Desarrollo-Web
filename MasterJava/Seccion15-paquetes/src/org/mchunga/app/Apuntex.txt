@@ -1,0 +1,8 @@
+
+
+Modificadores de acceso :
+           | la misma clase | otra clase del mismo paquete | subclase de otro paquete | otra clase de otro paquete |
+public     |     X          |             X                |               X          |             X              |
+protected  |     X          |             X                |               X          |                            |
+default    |     X          |             X                |                          |                            |
+private    |     X          |                              |                          |                            |

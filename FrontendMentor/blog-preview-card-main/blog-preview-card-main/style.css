@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Figtree:wght@600;800&family=League+Spartan:wght@400;500;700&family=Manrope:wght@600&family=Open+Sans:wght@400;600;700;800&family=Outfit:wght@300&family=Poppins:wght@400;500;600;900&family=Roboto+Mono:wght@500&display=swap");
+
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --black: hsl(0, 0%, 7%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 50%);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem 0;
+  color: var(--black);
+  background-color: var(--yellow);
+}
+
+.card {
+  max-width: 21.875rem;
+  height: auto;
+  padding: 1.25rem;
+  background-color: var(--white);
+  border: 0.1rem solid var(--black);
+  border-radius: 1rem;
+  box-shadow: 0.6rem 0.6rem var(--black);
+}
+
+.card__image-content {
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.card__tags {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.4rem;
+  margin: 0.5rem 0;
+}
+
+.card__tag {
+  width: fit-content;
+  padding: 0.25rem 1rem;
+  font-weight: 800;
+  font-size: 0.7em;
+  border-radius: 0.3rem;
+  background-color: var(--yellow);
+}
+
+.card__publication {
+  font-size: 0.9em;
+  font-weight: 700;
+}
+
+.card__title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0.4rem 0;
+}
+
+.card__description {
+  font-size: 0.9em;
+  font-weight: 600;
+  color: var(--grey);
+}
+
+.card__author {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 0.3rem;
+  font-weight: bold;
+  margin: 0.4rem 0;
+  font-size: 0.9em;
+}
+
+.card__author-image {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.attribution {
+  font-size: 1em;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

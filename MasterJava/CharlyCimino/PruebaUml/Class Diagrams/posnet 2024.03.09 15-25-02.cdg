@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="posnet">
+  <ClassDiagramComponents>
+    <Class name="Main" package="posnet" visibility="public" xPosition="813.0" yPosition="753.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="posnet" visibility="public" xPosition="176.0" yPosition="820.0">
+      <Fields>
+        <Field name="DNI" type="String" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="telefono" type="String" visibility="private"/>
+        <Field name="mail" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="DNI"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="telefono"/>
+          <Argument type="String" name="mail"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="nombreCompleto" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Posnet" package="posnet" visibility="public" xPosition="161.0" yPosition="143.0">
+      <Fields>
+        <Field name="RECARGO_POR_CUOTA" type="double" visibility="public" isStatic="true"/>
+        <Field name="MIN_CUOTAS" type="int" visibility="public" isStatic="true"/>
+        <Field name="MAX_CUOTAS" type="int" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="efectuarPago" returnType="Ticket" visibility="public">
+          <Argument type="TarjetaDeCredito" name="tarjeta"/>
+          <Argument type="double" name="montoAAbonar"/>
+          <Argument type="int" name="cantCuotas"/>
+        </Method>
+        <Method name="datosValidos" returnType="boolean" visibility="public">
+          <Argument type="TarjetaDeCredito" name="tarjeta"/>
+          <Argument type="double" name="monto"/>
+          <Argument type="int" name="cuotas"/>
+        </Method>
+        <Method name="recargoSegunCuotas" returnType="double" visibility="public">
+          <Argument type="int" name="cantCuotas"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TarjetaDeCredito" package="posnet" visibility="public" xPosition="55.0" yPosition="455.0">
+      <Fields>
+        <Field name="entidadFinanciera" type="EntidadFinanciera" visibility="private"/>
+        <Field name="entidadBancaria" type="String" visibility="private"/>
+        <Field name="nroTarjeta" type="String" visibility="private"/>
+        <Field name="saldo" type="double" visibility="private"/>
+        <Field name="titular" type="Persona" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="EntidadFinanciera" name="entidadFinanciera"/>
+          <Argument type="String" name="entidadBancaria"/>
+          <Argument type="String" name="nroTarjeta"/>
+          <Argument type="double" name="saldo"/>
+          <Argument type="Persona" name="p"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="saldoSuficiente" returnType="boolean" visibility="public">
+          <Argument type="double" name="monto"/>
+        </Method>
+        <Method name="descontar" returnType="void" visibility="public">
+          <Argument type="double" name="monto"/>
+        </Method>
+        <Method name="nombreCompletoDeTitular" returnType="String" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Ticket" package="posnet" visibility="public" xPosition="784.0" yPosition="152.0">
+      <Fields>
+        <Field name="nombreApellido" type="String" visibility="private"/>
+        <Field name="montoPagar" type="double" visibility="private"/>
+        <Field name="montoCuota" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombreApellido"/>
+          <Argument type="double" name="montoPagar"/>
+          <Argument type="double" name="montoCuota"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Enum name="EntidadFinanciera" package="posnet" visibility="public" xPosition="992.0" yPosition="536.0">
+      <Literals>
+        <Literal name="BIRZA"/>
+        <Literal name="CARTERMARD"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="titular" source="posnet.TarjetaDeCredito" target="posnet.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="posnet.Posnet" target="posnet.TarjetaDeCredito" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="entidadFinanciera" source="posnet.TarjetaDeCredito" target="posnet.EntidadFinanciera" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="posnet.Posnet" target="posnet.Ticket" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

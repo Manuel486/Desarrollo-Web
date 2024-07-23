@@ -1,0 +1,3 @@
+Vite permite crear la estructura de carpetas en react.
+
+SWC -> es un compilador de javascript y typescript. Nos ayuda a builder una version mas rapida

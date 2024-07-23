@@ -1,0 +1,7 @@
+C:\Users\manue\OneDrive\Documents\CursoC#\VaxiDrez\Ejercicios\Ejercicios\bin\Debug\Ejercicios.exe.config
+C:\Users\manue\OneDrive\Documents\CursoC#\VaxiDrez\Ejercicios\Ejercicios\bin\Debug\Ejercicios.exe
+C:\Users\manue\OneDrive\Documents\CursoC#\VaxiDrez\Ejercicios\Ejercicios\bin\Debug\Ejercicios.pdb
+C:\Users\manue\OneDrive\Documents\CursoC#\VaxiDrez\Ejercicios\Ejercicios\obj\Debug\Ejercicios.csproj.AssemblyReference.cache
+C:\Users\manue\OneDrive\Documents\CursoC#\VaxiDrez\Ejercicios\Ejercicios\obj\Debug\Ejercicios.csproj.CoreCompileInputs.cache
+C:\Users\manue\OneDrive\Documents\CursoC#\VaxiDrez\Ejercicios\Ejercicios\obj\Debug\Ejercicios.exe
+C:\Users\manue\OneDrive\Documents\CursoC#\VaxiDrez\Ejercicios\Ejercicios\obj\Debug\Ejercicios.pdb

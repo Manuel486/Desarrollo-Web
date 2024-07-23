@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejercicio-integrador-POO-III-master">
+  <ClassDiagramComponents>
+    <Class name="BarajaInglesa" package="ar.charlycimino.ejemplos.ejercicioIII" visibility="public" xPosition="304.0" yPosition="58.0">
+      <Fields>
+        <Field name="cartas" type="ArrayList&lt;Carta&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="mostrarBaraja" returnType="void" visibility="public"/>
+        <Method name="generarCartas" returnType="void" visibility="private"/>
+        <Method name="generarCartasNumerales" returnType="void" visibility="private"/>
+        <Method name="generarCartasFiguras" returnType="void" visibility="private"/>
+        <Method name="generarCartasJokers" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="Carta" package="ar.charlycimino.ejemplos.ejercicioIII.cartas" visibility="public" isAbstract="true" xPosition="317.0" yPosition="330.0">
+      <Fields>
+        <Field name="tapada" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="darVuelta" returnType="void" visibility="public"/>
+        <Method name="isTapada" returnType="boolean" visibility="public"/>
+        <Method name="mostrar" returnType="void" visibility="public"/>
+        <Method name="getRepresentacion" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CartaConPalo" package="ar.charlycimino.ejemplos.ejercicioIII.cartas" visibility="public" isAbstract="true" xPosition="493.0" yPosition="625.0">
+      <Fields>
+        <Field name="palo" type="Palo" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Palo" name="palo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPalo" returnType="Palo" visibility="public"/>
+        <Method name="getRepresentacion" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CartaFigura" package="ar.charlycimino.ejemplos.ejercicioIII.cartas" visibility="public" xPosition="669.0" yPosition="878.0">
+      <Fields>
+        <Field name="letra" type="char" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="char" name="letra"/>
+          <Argument type="Palo" name="palo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRepresentacion" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CartaJoker" package="ar.charlycimino.ejemplos.ejercicioIII.cartas" visibility="public" xPosition="176.0" yPosition="625.0">
+      <Fields>
+        <Field name="aColor" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="boolean" name="aColor"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRepresentacion" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CartaNumeral" package="ar.charlycimino.ejemplos.ejercicioIII.cartas" visibility="public" xPosition="329.0" yPosition="878.0">
+      <Fields>
+        <Field name="numero" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="numero"/>
+          <Argument type="Palo" name="palo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRepresentacion" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Principal" package="ar.charlycimino.ejemplos.ejercicioIII" visibility="public" xPosition="60.0" yPosition="358.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Enum name="Color" package="ar.charlycimino.ejemplos.ejercicioIII" visibility="public" xPosition="877.0" yPosition="460.0">
+      <Literals>
+        <Literal name="ROJO"/>
+        <Literal name="NEGRO"/>
+      </Literals>
+    </Enum>
+    <Enum name="Palo" package="ar.charlycimino.ejemplos.ejercicioIII" visibility="public" xPosition="877.0" yPosition="639.0">
+      <Literals>
+        <Literal name="DIAMANTE"/>
+        <Literal name="CORAZON"/>
+        <Literal name="PICA"/>
+        <Literal name="TREBOL"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="ar.charlycimino.ejemplos.ejercicioIII.cartas.CartaConPalo" target="ar.charlycimino.ejemplos.ejercicioIII.cartas.Carta"/>
+    <IsRelation name="is" source="ar.charlycimino.ejemplos.ejercicioIII.cartas.CartaNumeral" target="ar.charlycimino.ejemplos.ejercicioIII.cartas.CartaConPalo"/>
+    <HasRelation name="cartas" source="ar.charlycimino.ejemplos.ejercicioIII.BarajaInglesa" target="ar.charlycimino.ejemplos.ejercicioIII.cartas.Carta" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Carta&gt;"/>
+    <IsRelation name="is" source="ar.charlycimino.ejemplos.ejercicioIII.cartas.CartaFigura" target="ar.charlycimino.ejemplos.ejercicioIII.cartas.CartaConPalo"/>
+    <IsRelation name="is" source="ar.charlycimino.ejemplos.ejercicioIII.cartas.CartaJoker" target="ar.charlycimino.ejemplos.ejercicioIII.cartas.Carta"/>
+    <HasRelation name="palo" source="ar.charlycimino.ejemplos.ejercicioIII.cartas.CartaConPalo" target="ar.charlycimino.ejemplos.ejercicioIII.Palo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ar.charlycimino.ejemplos.ejercicioIII.cartas.CartaConPalo" target="ar.charlycimino.ejemplos.ejercicioIII.Palo" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

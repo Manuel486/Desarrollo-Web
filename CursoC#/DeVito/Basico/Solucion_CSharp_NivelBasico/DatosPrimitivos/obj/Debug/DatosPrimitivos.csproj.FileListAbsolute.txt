@@ -1,0 +1,7 @@
+C:\Users\manue\OneDrive\Documents\CursoC#\DeVito\Basico\Solucion_CSharp_NivelBasico\DatosPrimitivos\bin\Debug\DatosPrimitivos.exe.config
+C:\Users\manue\OneDrive\Documents\CursoC#\DeVito\Basico\Solucion_CSharp_NivelBasico\DatosPrimitivos\bin\Debug\DatosPrimitivos.exe
+C:\Users\manue\OneDrive\Documents\CursoC#\DeVito\Basico\Solucion_CSharp_NivelBasico\DatosPrimitivos\bin\Debug\DatosPrimitivos.pdb
+C:\Users\manue\OneDrive\Documents\CursoC#\DeVito\Basico\Solucion_CSharp_NivelBasico\DatosPrimitivos\obj\Debug\DatosPrimitivos.csproj.AssemblyReference.cache
+C:\Users\manue\OneDrive\Documents\CursoC#\DeVito\Basico\Solucion_CSharp_NivelBasico\DatosPrimitivos\obj\Debug\DatosPrimitivos.csproj.CoreCompileInputs.cache
+C:\Users\manue\OneDrive\Documents\CursoC#\DeVito\Basico\Solucion_CSharp_NivelBasico\DatosPrimitivos\obj\Debug\DatosPrimitivos.exe
+C:\Users\manue\OneDrive\Documents\CursoC#\DeVito\Basico\Solucion_CSharp_NivelBasico\DatosPrimitivos\obj\Debug\DatosPrimitivos.pdb

@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.contenedor {
+    width: 43em;
+    margin: 1rem 1.5rem;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.img1, .img2 {
+    width: 50%;
+    border-radius: 10px 0 0 10px;
+}
+
+.img2 {
+    display: none;
+}
+
+.contenedor_contenido {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.perfume {
+    text-transform: uppercase;
+    letter-spacing: 0.3125rem;
+}
+
+.contenedor_contenido h2 {
+    font-size: 3em;
+    line-height: 1em;
+}
+
+.contenedor_contenido p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    color: hsl(228, 12%, 48%);
+}
+
+.precios {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.precio_ahora {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: hsl(158, 36%, 37%);
+    opacity: 0.9;
+}
+
+.precio_antes {
+    font-size: 1.25em;
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+}
+
+button {
+    padding: 1rem;
+    background-color: hsl(158, 36%, 37%);
+    opacity: 0.8;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.material-symbols-outlined {
+    font-size: 1em;
+}
+
+@media (max-width: 600px) {
+    
+    body {
+        font-size: 13px;
+    }
+
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img1 {
+        display: none;
+    }
+
+    .img2 {
+        display: block;
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+    }
+}

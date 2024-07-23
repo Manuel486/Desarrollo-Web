@@ -1,0 +1,60 @@
+Proyecto PARTE 02
+1. Creo las tablas relaciones e inserte datos
+2. Creo la solución en blanco y agrego los proyectos
+3. Establezco por defecto el proyecto de Modelo 
+4. En el proyecto de Modelo agrego las dependencias de EntityFramework y Tool (Misma versión que el proyecto en .NET). Click en dependencias en model
+5. Me voy a herramientas y administrar paquetes nuggets.
+6. Utilizo el comando Scaffold-DbContext "Server=(local); DataBase=dbventa; Trusted_Connection=True; TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer
+7. Recuerda que en la venta de administrar debe estas seleccionado como proyecto el Model
+8. Empieza con la construcción de la capa del modelo, que son una representación que tenemos en la base de datos.
+9. Luego debo corregir los nombres de las clases dando click derecho a cada clase.
+10. Crear un carpeta DBContext en DAL y mover el archivo DBContext ahi, corregir error de direccion.
+11. Ir a dependencias y agregar referencias al proyecto. 
+12. Correr dbContext en DAL haciendo una refencia al model
+13. Borar esto del OnModelConfiguring del DBContext:
+
+	#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseSqlServer("");
+
+14. Agregar lo atenrior al appseting.json de SistemaVentaAPI: 
+
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "cadenaSQL": "Server=(local); DataBase=DBVENTA; Trusted_Connection=True; TrustServerCertificate=True";
+  }
+}
+
+15. Ir al IOC e iniciar la inyeccion
+16. Configurar el program.cs ( con ***** lo que se agrego)
+
+
+	using SistemaVenta.IOC;      //******
+
+
+	var builder = WebApplication.CreateBuilder(args);
+
+	// Add services to the container.
+
+	builder.Services.AddControllers();
+	// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+	builder.Services.AddEndpointsApiExplorer();
+	builder.Services.AddSwaggerGen();
+
+
+	builder.Services.inyectarDependencias(builder.Configuration);  /*******
+
+	var app = builder.Build();
+
+
+
+Proyecto PARTE 03
+1. Continuar con la parte de DALL (Logia del Negocio)
+
+

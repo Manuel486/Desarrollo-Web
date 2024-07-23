@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="ProgramasDelProfesor">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ProgramasDelProfesor/3_poo_clases_abstractas[elementos_form_validadores].zip!/" />
+      <root url="jar://$PROJECT_DIR$/ProgramasDelProfesor/HolaMundo.zip!/" />
+      <root url="jar://$PROJECT_DIR$/ProgramasDelProfesor/1_poo_automovil.zip!/" />
+      <root url="jar://$PROJECT_DIR$/ProgramasDelProfesor/1_poo_herencia.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Javascript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="anotacion">
+        <p class="anotacion__titulo">Anotaciones</p>
+        <div class="anotacion__input-container">
+            <input type="text" placeholder="Ingrese la anotación" id="anotacion" name="anotacion"
+                class="anotacion__input">
+            <button onclick="ingresarAnotacion()" class="anotacion__button anotacion__button--guardar">Ingresar</button>
+        </div>
+        <ul id="anotaciones" class="anotacion__lista">
+            <!-- <li class="anotacion__item">
+                <span class="anotacion__texto">Texto de la anotación</span>
+                <div class="anotacion__botones">
+                    <button class="anotacion__button anotacion__button--editar">Editar</button>
+                    <button class="anotacion__button anotacion__button--eliminar">Eliminar</button>
+                </div>
+            </li> -->
+        </ul>
+        <p id="mensaje" class="anotacion__mensaje">No hay anotaciones</p>
+    </div>
+
+    <!-- <script src="anotaciones1.js"></script> -->
+    <!-- <script src="anotaciones2.js"></script> -->
+    <script src="random.js"></script>
+</body>
+
+</html>

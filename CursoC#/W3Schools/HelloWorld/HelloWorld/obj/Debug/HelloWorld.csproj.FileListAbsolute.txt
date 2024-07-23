@@ -1,0 +1,7 @@
+C:\Users\manue\OneDrive\Documents\Desarrollo Web\CursoC#\W3Schools\HelloWorld\HelloWorld\bin\Debug\HelloWorld.exe.config
+C:\Users\manue\OneDrive\Documents\Desarrollo Web\CursoC#\W3Schools\HelloWorld\HelloWorld\bin\Debug\HelloWorld.exe
+C:\Users\manue\OneDrive\Documents\Desarrollo Web\CursoC#\W3Schools\HelloWorld\HelloWorld\bin\Debug\HelloWorld.pdb
+C:\Users\manue\OneDrive\Documents\Desarrollo Web\CursoC#\W3Schools\HelloWorld\HelloWorld\obj\Debug\HelloWorld.csproj.AssemblyReference.cache
+C:\Users\manue\OneDrive\Documents\Desarrollo Web\CursoC#\W3Schools\HelloWorld\HelloWorld\obj\Debug\HelloWorld.csproj.CoreCompileInputs.cache
+C:\Users\manue\OneDrive\Documents\Desarrollo Web\CursoC#\W3Schools\HelloWorld\HelloWorld\obj\Debug\HelloWorld.exe
+C:\Users\manue\OneDrive\Documents\Desarrollo Web\CursoC#\W3Schools\HelloWorld\HelloWorld\obj\Debug\HelloWorld.pdb

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="24_interfaces-java">
+  <ClassDiagramComponents>
+    <Class name="Ave" package="ar.charlycimino.ejemplos.interfaces" visibility="public" xPosition="21.0" yPosition="152.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="ponerHuevos" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Dispositivo" package="ar.charlycimino.ejemplos.interfaces" visibility="public" xPosition="787.0" yPosition="287.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="encender" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PalomaMensajera" package="ar.charlycimino.ejemplos.interfaces" visibility="public" xPosition="72.0" yPosition="488.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="volarRapido" returnType="void" visibility="public"/>
+        <Method name="enviarMensaje" returnType="void" visibility="public">
+          <Argument type="String" name="mensaje"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PartidoDelBuenCodigo" package="ar.charlycimino.ejemplos.interfaces" visibility="public" xPosition="277.0" yPosition="22.0">
+      <Fields>
+        <Field name="mensajeros" type="ArrayList&lt;EnviadorDeMensaje&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="agregarMensajero" returnType="void" visibility="public">
+          <Argument type="EnviadorDeMensaje" name="mensajero"/>
+        </Method>
+        <Method name="hacerCampania" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="ar.charlycimino.ejemplos.interfaces" visibility="public" xPosition="346.0" yPosition="507.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="enviarMensaje" returnType="void" visibility="public">
+          <Argument type="String" name="mensaje"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Principal" package="ar.charlycimino.ejemplos.interfaces" visibility="public" xPosition="1246.0" yPosition="50.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TelefonoMovil" package="ar.charlycimino.ejemplos.interfaces" visibility="public" xPosition="619.0" yPosition="507.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="llamar" returnType="void" visibility="public"/>
+        <Method name="enviarMensaje" returnType="void" visibility="public">
+          <Argument type="String" name="mensaje"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="EnviadorDeMensaje" package="ar.charlycimino.ejemplos.interfaces" visibility="public" xPosition="346.0" yPosition="254.0">
+      <Methods>
+        <Method name="enviarMensaje" returnType="void" visibility="public" isAbstract="true">
+          <Argument type="String" name="mensaje"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="ar.charlycimino.ejemplos.interfaces.TelefonoMovil" target="ar.charlycimino.ejemplos.interfaces.Dispositivo"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="ar.charlycimino.ejemplos.interfaces.PalomaMensajera" target="ar.charlycimino.ejemplos.interfaces.EnviadorDeMensaje"/>
+    <IsRelation name="is" source="ar.charlycimino.ejemplos.interfaces.PalomaMensajera" target="ar.charlycimino.ejemplos.interfaces.Ave"/>
+    <UseRelation source="ar.charlycimino.ejemplos.interfaces.PartidoDelBuenCodigo" target="ar.charlycimino.ejemplos.interfaces.EnviadorDeMensaje" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="ar.charlycimino.ejemplos.interfaces.TelefonoMovil" target="ar.charlycimino.ejemplos.interfaces.EnviadorDeMensaje"/>
+    <HasRelation name="mensajeros" source="ar.charlycimino.ejemplos.interfaces.PartidoDelBuenCodigo" target="ar.charlycimino.ejemplos.interfaces.EnviadorDeMensaje" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;EnviadorDeMensaje&gt;"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="ar.charlycimino.ejemplos.interfaces.Persona" target="ar.charlycimino.ejemplos.interfaces.EnviadorDeMensaje"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

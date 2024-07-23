@@ -1,0 +1,13 @@
+https://jestjs.io/docs/getting-started
+
+- npm install --save-dev jest
+Add the following section to your package.json:
+{
+  "scripts": {
+    "test": "jest"
+  }
+}
+
+- npm add -D @types/jest
+
+- npm install --save-dev babel-jest @babel/core @babel/preset-env

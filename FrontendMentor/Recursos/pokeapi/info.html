@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de Pikachu</title>
+</head>
+
+<body>
+    <h1>Información de Pikachu</h1>
+    <div id="pokemonInfo"></div>
+    <script>
+        async function getPokemonInfo(name) {
+            try {
+                // Obtener datos básicos del Pokemon
+                const pokemonResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+                const pokemonData = await pokemonResponse.json();
+
+                // Obtener la descripción del Pokemon
+                const speciesResponse = await fetch(pokemonData.species.url);
+                const speciesData = await speciesResponse.json();
+                const description = speciesData.flavor_text_entries.find(entry => entry.language.name === 'es').flavor_text;
+
+                // Obtener datos de evolución
+                const evolutionChainResponse = await fetch(speciesData.evolution_chain.url);
+                const evolutionChainData = await evolutionChainResponse.json();
+
+                const evolutionChain = [];
+                let currentPokemon = evolutionChainData.chain;
+                do {
+                    evolutionChain.push(currentPokemon.species.name);
+                    currentPokemon = currentPokemon.evolves_to[0];
+                } while (currentPokemon !== undefined && currentPokemon.hasOwnProperty('evolves_to'));
+
+                const previousEvolution = evolutionChain[evolutionChain.indexOf(name) - 1];
+                const nextEvolution = evolutionChain[evolutionChain.indexOf(name) + 1];
+                const currentEvolution = name;
+
+                // Obtener habilidades
+                const abilities = pokemonData.abilities.map(ability => ability.ability.name);
+
+                // Obtener estadísticas
+                const stats = pokemonData.stats.map(stat => ({
+                    name: stat.stat.name,
+                    base_stat: stat.base_stat
+                }));
+
+                // Obtener altura y peso
+                const height = pokemonData.height / 10; // Convertir a metros
+                const weight = pokemonData.weight / 10; // Convertir a kilogramos
+
+                // Obtener imágenes
+                const spriteUrl = pokemonData.sprites.front_default;
+                const previousSpriteUrl = previousEvolution ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${evolutionChain.indexOf(previousEvolution) + 1}.png` : null;
+                const currentSpriteUrl = spriteUrl;
+                const nextSpriteUrl = nextEvolution ? `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${evolutionChain.indexOf(nextEvolution) + 1}.png` : null;
+
+                return {
+                    name: name,
+                    description: description,
+                    height: height + ' m',
+                    weight: weight + ' kg',
+                    abilities: abilities,
+                    stats: stats,
+                    previousEvolution: previousEvolution,
+                    currentEvolution: currentEvolution,
+                    nextEvolution: nextEvolution,
+                    spriteUrl: spriteUrl,
+                    previousSpriteUrl: previousSpriteUrl,
+                    currentSpriteUrl: currentSpriteUrl,
+                    nextSpriteUrl: nextSpriteUrl
+                };
+            } catch (error) {
+                console.error('Error al obtener información del Pokémon:', error);
+            }
+        }
+
+        async function displayPokemonInfo(name) {
+            const pokemonInfo = await getPokemonInfo(name);
+            const pokemonInfoContainer = document.getElementById('pokemonInfo');
+
+            if (pokemonInfo) {
+                let html = `
+                    <img src="${pokemonInfo.currentSpriteUrl}" alt="${pokemonInfo.currentEvolution}">
+                    <p><strong>Descripción:</strong> ${pokemonInfo.description}</p>
+                    <p><strong>Altura:</strong> ${pokemonInfo.height}</p>
+                    <p><strong>Peso:</strong> ${pokemonInfo.weight}</p>
+                    <p><strong>Habilidades:</strong> ${pokemonInfo.abilities.join(', ')}</p>
+                    <p><strong>Estadísticas:</strong></p>
+                    <ul>
+                `;
+                pokemonInfo.stats.forEach(stat => {
+                    html += `<li>${stat.name}: ${stat.base_stat}</li>`;
+                });
+                html += '</ul>';
+
+                if (pokemonInfo.previousEvolution) {
+                    html += `
+                        <h2>Evolución Anterior: ${pokemonInfo.previousEvolution}</h2>
+                        <img src="${pokemonInfo.previousSpriteUrl}" alt="${pokemonInfo.previousEvolution}">
+                    `;
+                }
+
+                html += `
+                    <h2>Evolución Actual: ${pokemonInfo.currentEvolution}</h2>
+                    <img src="${pokemonInfo.currentSpriteUrl}" alt="${pokemonInfo.currentEvolution}">
+                `;
+
+                if (pokemonInfo.nextEvolution) {
+                    html += `
+                        <h2>Evolución Siguiente: ${pokemonInfo.nextEvolution}</h2>
+                        <img src="${pokemonInfo.nextSpriteUrl}" alt="${pokemonInfo.nextEvolution}">
+                    `;
+                }
+
+                pokemonInfoContainer.innerHTML = html;
+            } else {
+                pokemonInfoContainer.innerHTML = '<p>No se encontró información para el Pokémon especificado.</p>';
+            }
+        }
+
+        // Llamar a la función para mostrar la información de Pikachu
+        displayPokemonInfo('pikachu');
+    </script>
+</body>
+
+</html>

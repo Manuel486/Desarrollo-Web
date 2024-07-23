@@ -1,0 +1,28 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>13</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>312</x><y>364</y><w>169</w><h>104</h></coordinates><panel_attributes>AutoElectrico
+-
+
+-
++ recargar(): void
++ acelerar(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>143</x><y>104</y><w>195</w><h>91</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+/Vehiculo/
+-
+-
+/+ acelerar(): void/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>455</x><y>104</y><w>195</w><h>91</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+/Recargable/
+-
+-
+/+ recargar(): void/</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>377</x><y>312</y><w>39</w><h>78</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element><element><id>UMLClass</id><coordinates><x>299</x><y>247</y><w>195</w><h>78</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+/VehiculoRecargable/
+-
+-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>247</x><y>182</y><w>130</w><h>91</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;80;50</additional_attributes></element><element><id>Relation</id><coordinates><x>429</x><y>182</y><w>130</w><h>91</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>80;10;10;50</additional_attributes></element><element><id>UMLClass</id><coordinates><x>533</x><y>364</y><w>169</w><h>104</h></coordinates><panel_attributes>MonopatinElectrico
+-
+
+-
++ recargar(): void
++ acelerar(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>91</x><y>364</y><w>169</w><h>104</h></coordinates><panel_attributes>BiciElectrica
+-
+
+-
++ recargar(): void
++ acelerar(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>195</x><y>312</y><w>169</w><h>78</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>110;10;10;40</additional_attributes></element><element><id>Relation</id><coordinates><x>442</x><y>312</y><w>169</w><h>78</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;110;40</additional_attributes></element></diagram>

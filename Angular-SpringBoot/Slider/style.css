@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  padding: 10px;
+  transition: transform 0.5s;
+}
+
+.product {
+  width: 400px;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.product img {
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
+  border-radius: 10px 10px 0 0;
+}
+
+.product .information {
+  padding: 20px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: sans-serif;
+  justify-content: space-between;
+}
+
+.product .information button {
+  margin: 20px 0;
+  width: 100%;
+  background-color: rgb(230, 10, 65);
+  border: none;
+  outline: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.product .information .price {
+  font-size: 24px;
+}
+
+.arrow {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrow button {
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  background-color: white;
+  margin: 0 20px;
+  cursor: pointer;
+}

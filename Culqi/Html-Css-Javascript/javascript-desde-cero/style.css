@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #141e46;
+  display: flex;
+  justify-content: center;
+}
+
+.anotacion {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.anotacion__titulo {
+  padding: 2rem;
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+}
+
+.anotacion__input-container {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.anotacion__input {
+  flex-grow: 4;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+.anotacion__button {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+.anotacion__button:hover {
+  font-weight: bold;
+}
+
+.anotacion__button--guardar:hover {
+  background-color: aqua;
+  color: white;
+}
+
+.anotacion__lista {
+  width: 100%;
+  background-color: #141e46;
+  margin: 20px 0;
+  list-style: none;
+  border-radius: 10px;
+}
+
+.anotacion__item {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.anotacion__texto {
+  display: flex; /* Convertir a flex container */
+  align-items: center; /* Centrar verticalmente el contenido */
+  justify-content: center;
+  flex-grow: 4;
+  text-align: center;
+  background-color: beige;
+  border-radius: 10px;
+}
+
+.anotacion__botones {
+  flex-grow: 1;
+  display: flex;
+  gap: 10px;
+}
+
+.anotacion__mensaje {
+  width: 100%;
+  padding: 30px;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+  background-color: #fefded;
+}
+
+.anotacion__button--editar {
+  background-color: gold;
+}
+
+.anotacion__button--eliminar {
+  background-color: crimson;
+}

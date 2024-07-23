@@ -1,0 +1,13 @@
+¡Claro! Aquí hay algunas páginas que te pueden ayudar a aprender Tailwind CSS mediante ejercicios:
+
+Tailwind Toolbox (https://www.tailwindtoolbox.com/): Este sitio web tiene una sección de ejemplos donde puedes ver cómo se ve Tailwind CSS en acción. También tiene un generador de plantillas para ayudarte a crear tus propios diseños.
+
+Tailwind Components (https://tailwindcomponents.com/): Este sitio web ofrece una amplia variedad de componentes de UI preconstruidos que puedes utilizar para aprender cómo funciona Tailwind CSS.
+
+Tailwind Play (https://play.tailwindcss.com/): Este es un editor de código en línea para Tailwind CSS que te permite experimentar con diferentes estilos y ver cómo se ven en tiempo real.
+
+Tailwind Weekly (https://tailwindweekly.com/): Esta es una newsletter semanal que te envía ejemplos y recursos útiles para aprender Tailwind CSS.
+
+Frontend Mentor (https://www.frontendmentor.io/): Este sitio web ofrece desafíos de diseño que puedes resolver utilizando Tailwind CSS (entre otros frameworks CSS). Es una forma práctica de aprender cómo aplicar Tailwind CSS en un proyecto real.
+
+Espero que estas recomendaciones te ayuden a aprender Tailwind CSS de una forma divertida y efectiva mediante ejercicios. ¡Buena suerte!

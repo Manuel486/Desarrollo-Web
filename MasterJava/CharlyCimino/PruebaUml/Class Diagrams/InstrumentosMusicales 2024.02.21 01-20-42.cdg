@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="InstrumentosMusicales">
+  <ClassDiagramComponents>
+    <Class name="Instrumento" package="instrumentosmusicales" visibility="public" xPosition="153.0" yPosition="68.0">
+      <Fields>
+        <Field name="id" type="String" visibility="private"/>
+        <Field name="precio" type="double" visibility="private"/>
+        <Field name="tipo" type="TipoInstrumento" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="double" name="precio"/>
+          <Argument type="TipoInstrumento" name="tipo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="String" visibility="public"/>
+        <Method name="getTipo" returnType="TipoInstrumento" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Main" package="instrumentosmusicales" visibility="public" xPosition="108.0" yPosition="497.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Sucursal" package="instrumentosmusicales" visibility="public" xPosition="416.0" yPosition="453.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="instrumentos" type="List&lt;Instrumento&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="List&lt;Instrumento&gt;" name="instrumentos"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="agregarInstrumento" returnType="void" visibility="public">
+          <Argument type="Instrumento" name="instrumentos"/>
+        </Method>
+        <Method name="listarInstrumentos" returnType="void" visibility="public"/>
+        <Method name="instrumentosPorTipo" returnType="ArrayList&lt;Instrumento&gt;" visibility="public">
+          <Argument type="TipoInstrumento" name="tipoInstrumento"/>
+        </Method>
+        <Method name="borrarInstrumento" returnType="Instrumento" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="porInstrumentoPorTipo" returnType="double[]" visibility="public"/>
+        <Method name="absolutoAPorcentaje" returnType="void" visibility="private">
+          <Argument type="double[]" name="porcentajes"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="buscarInstrumento" returnType="Instrumento" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Enum name="TipoInstrumento" package="instrumentosmusicales" visibility="public" xPosition="725.0" yPosition="112.0">
+      <Literals>
+        <Literal name="PERCUSION"/>
+        <Literal name="VIENTO"/>
+        <Literal name="CUERDA"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="instrumentos" source="instrumentosmusicales.Sucursal" target="instrumentosmusicales.Instrumento" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Instrumento&gt;"/>
+    <UseRelation source="instrumentosmusicales.Sucursal" target="instrumentosmusicales.TipoInstrumento" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="instrumentosmusicales.Instrumento" target="instrumentosmusicales.TipoInstrumento" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="instrumentosmusicales.Sucursal" target="instrumentosmusicales.Instrumento" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tipo" source="instrumentosmusicales.Instrumento" target="instrumentosmusicales.TipoInstrumento" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

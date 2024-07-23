@@ -1,0 +1,27 @@
+
+words = ["foo","bar"]
+
+
+generate("",["foo","bar")) i=0 , length = 2
+		
+	generate("foo",["bar"]) i=0 , length = 1
+
+		generate("foobar",[]) length = 0
+			push("foobar")
+
+generate("bar",["foo"]) i=1, length = 2
+
+	generate("barfoo",[]) i=0, length = 1
+		push("barfoo")
+
+
+-------------------------------------------------------
+
+s = "barfoothefoobarman";
+
+
+- foobar
+ 	* 9 , index = 10
+	
+- barfoo
+	* 0 , index = 1

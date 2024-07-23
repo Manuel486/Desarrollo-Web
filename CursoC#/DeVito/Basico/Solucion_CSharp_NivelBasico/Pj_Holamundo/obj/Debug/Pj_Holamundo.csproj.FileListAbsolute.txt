@@ -1,0 +1,7 @@
+C:\Users\manue\OneDrive\Documents\CursoC#\DeVito\Basico\Solucion_CSharp_NivelBasico\Pj_Holamundo\bin\Debug\Pj_Holamundo.exe.config
+C:\Users\manue\OneDrive\Documents\CursoC#\DeVito\Basico\Solucion_CSharp_NivelBasico\Pj_Holamundo\bin\Debug\Pj_Holamundo.exe
+C:\Users\manue\OneDrive\Documents\CursoC#\DeVito\Basico\Solucion_CSharp_NivelBasico\Pj_Holamundo\bin\Debug\Pj_Holamundo.pdb
+C:\Users\manue\OneDrive\Documents\CursoC#\DeVito\Basico\Solucion_CSharp_NivelBasico\Pj_Holamundo\obj\Debug\Pj_Holamundo.csproj.AssemblyReference.cache
+C:\Users\manue\OneDrive\Documents\CursoC#\DeVito\Basico\Solucion_CSharp_NivelBasico\Pj_Holamundo\obj\Debug\Pj_Holamundo.csproj.CoreCompileInputs.cache
+C:\Users\manue\OneDrive\Documents\CursoC#\DeVito\Basico\Solucion_CSharp_NivelBasico\Pj_Holamundo\obj\Debug\Pj_Holamundo.exe
+C:\Users\manue\OneDrive\Documents\CursoC#\DeVito\Basico\Solucion_CSharp_NivelBasico\Pj_Holamundo\obj\Debug\Pj_Holamundo.pdb

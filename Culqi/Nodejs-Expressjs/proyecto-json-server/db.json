@@ -1,0 +1,40 @@
+{
+  "profesores": [
+    {
+      "nombre": "Manuel",
+      "apellido": "Chunga",
+      "materias": [
+        {
+          "nombre": "NodeJs"
+        },
+        {
+          "nombre": "Java"
+        }
+      ]
+    }
+  ],
+  "alumnos": [
+    {
+      "nombre": "Maria",
+      "apellido": "Rodriguez",
+      "promedio": 8.2
+    },
+    {
+      "nombre": "Alfonsina",
+      "apellido": "Storni",
+      "promedio": 10
+    }
+  ],
+  "cursos": [
+    {
+      "nombre": "Nodejs",
+      "duracion": 7,
+      "dificultad": "intermedia"
+    },
+    {
+      "nombre": "Java",
+      "duracion": 2,
+      "dificultad": "intermedia"
+    }
+  ]
+}

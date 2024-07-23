@@ -1,0 +1,1 @@
+npm install --> instalar los nodes modules

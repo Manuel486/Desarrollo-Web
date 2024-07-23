@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="CentroEducativo">
+  <ClassDiagramComponents>
+    <Class name="Alumno" package="centroeducativo" visibility="public" xPosition="579.0" yPosition="20.0">
+      <Fields>
+        <Field name="DNI" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="examenes" type="ArrayList&lt;Examen&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="DNI"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="nombre"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="agregarExamen" returnType="void" visibility="public">
+          <Argument type="Examen" name="e"/>
+        </Method>
+        <Method name="nombreCompleto" returnType="String" visibility="public"/>
+        <Method name="aprobo" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CentroEducativo" package="centroeducativo" visibility="public" xPosition="68.0" yPosition="32.0">
+      <Fields>
+        <Field name="alumnos" type="ArrayList&lt;Alumno&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="agregarAlumno" returnType="void" visibility="public">
+          <Argument type="Alumno" name="a"/>
+        </Method>
+        <Method name="cantAprobados" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Examen" package="centroeducativo" visibility="public" isAbstract="true" xPosition="654.0" yPosition="496.0">
+      <Fields>
+        <Field name="fecha" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="fecha"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="ExamenEscrito" package="centroeducativo" visibility="public" xPosition="376.0" yPosition="799.0">
+      <Fields>
+        <Field name="MIN_NOTA" type="int" visibility="private" isStatic="true"/>
+        <Field name="MAX_NOTA" type="int" visibility="private" isStatic="true"/>
+        <Field name="NOTA_APROB" type="int" visibility="private" isStatic="true"/>
+        <Field name="MAX_DURACION" type="int" visibility="private" isStatic="true"/>
+        <Field name="duracion" type="int" visibility="private"/>
+        <Field name="nota" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="duracion"/>
+          <Argument type="int" name="nota"/>
+          <Argument type="String" name="fecha"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="aprobo" returnType="boolean" visibility="public"/>
+        <Method name="notaValida" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ExamenOral" package="centroeducativo" visibility="public" xPosition="785.0" yPosition="799.0">
+      <Fields>
+        <Field name="nivelSatisfaccion" type="NivelSatisfaccion" visibility="private"/>
+        <Field name="MIN_NIVEL" type="NivelSatisfaccion" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="NivelSatisfaccion" name="nivelSatisfaccion"/>
+          <Argument type="String" name="fecha"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="aprobo" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Main" package="centroeducativo" visibility="public" xPosition="909.0" yPosition="388.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="Aprobable" package="centroeducativo" visibility="public" xPosition="183.0" yPosition="427.0">
+      <Methods>
+        <Method name="aprobo" returnType="boolean" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Interface>
+    <Enum name="NivelSatisfaccion" package="centroeducativo" visibility="public" xPosition="1112.0" yPosition="587.0">
+      <Literals>
+        <Literal name="INSUFICIENTE"/>
+        <Literal name="SUFICIENTE"/>
+        <Literal name="EXCELENTE"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="centroeducativo.Examen" target="centroeducativo.Aprobable"/>
+    <IsRelation name="is" source="centroeducativo.ExamenEscrito" target="centroeducativo.Examen"/>
+    <IsRelation name="is" source="centroeducativo.ExamenOral" target="centroeducativo.Examen"/>
+    <UseRelation source="centroeducativo.CentroEducativo" target="centroeducativo.Alumno" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="centroeducativo.Alumno" target="centroeducativo.Examen" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="centroeducativo.Alumno" target="centroeducativo.Aprobable"/>
+    <HasRelation name="MIN_NIVEL" source="centroeducativo.ExamenOral" target="centroeducativo.NivelSatisfaccion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="alumnos" source="centroeducativo.CentroEducativo" target="centroeducativo.Alumno" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Alumno&gt;"/>
+    <HasRelation name="examenes" source="centroeducativo.Alumno" target="centroeducativo.Examen" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Examen&gt;"/>
+    <HasRelation name="nivelSatisfaccion" source="centroeducativo.ExamenOral" target="centroeducativo.NivelSatisfaccion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

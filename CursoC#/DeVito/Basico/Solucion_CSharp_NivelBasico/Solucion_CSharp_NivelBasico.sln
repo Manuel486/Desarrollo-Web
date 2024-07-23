@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34322.80
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pj_Holamundo", "Pj_Holamundo\Pj_Holamundo.csproj", "{554AF449-45E0-43E8-AF7D-A427180D503E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatosPrimitivos", "DatosPrimitivos\DatosPrimitivos.csproj", "{8D0A2E23-6DC2-43BB-8B9A-C7036318222F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{554AF449-45E0-43E8-AF7D-A427180D503E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{554AF449-45E0-43E8-AF7D-A427180D503E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{554AF449-45E0-43E8-AF7D-A427180D503E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{554AF449-45E0-43E8-AF7D-A427180D503E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D0A2E23-6DC2-43BB-8B9A-C7036318222F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D0A2E23-6DC2-43BB-8B9A-C7036318222F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D0A2E23-6DC2-43BB-8B9A-C7036318222F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D0A2E23-6DC2-43BB-8B9A-C7036318222F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {27E81866-CB42-4ABE-986F-796D639A1B8B}
+	EndGlobalSection
+EndGlobal

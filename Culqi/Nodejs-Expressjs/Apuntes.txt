@@ -1,0 +1,29 @@
+Pasos: 
+	- npm init
+	- npm i nodemon --save-dev
+	- npm i express
+	- npm i dotenv
+	- npm i mongoose
+	- npm i body-parser
+
+Readme: 2:26
+	- Reali
+
+Mongo: 
+	- mongod
+	- mongosh
+
+
+npm init : Para iniciar poniendo el nombre, la version, description, etc.
+
+dotenv - me permite trabajar con las variables que pude crear.
+
+Mongoose nos permitira armar nuestro modelo y esquema.
+
+Docker es una plataforma que permite empaquetas, distribuir y ejecutar aplicaciones en contenedores.
+
+Body-Parcer: Es un middleware de Express.js que analiza los cuerpos de las solicitudes entrantes en middleware
+antes de que se manejen las solicitudes de sus manejadores.
+
+Middleware: Un middleware en Node.js es una función que se ejecuta en tre la solicitud de un cliente
+y la respuesta del servidor.

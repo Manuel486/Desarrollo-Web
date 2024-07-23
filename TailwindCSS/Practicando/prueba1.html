@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="bg-red-100 md:container md:mx-auto">
+    hola
+  </div>
+  <div class="columns-2 hover:columns-3">
+    <div class="bg-green-100 w-full">1</div>
+    <div class="bg-green-200">2</div>
+    <div class="bg-green-300 w-full">3</div>
+  </div>
+
+  <br>
+  <hr>
+  <br>
+  <h3>Columnas</h3>
+  <div class="columns-2">
+    <p>Well, let me tell you something, ...</p>
+    <p class="break-after-column">Sure, go ahead, laugh...</p>
+    <p>Maybe we can live without...</p>
+    <p>Look. If you think this is...</p>
+  </div>
+
+  <br>
+  <hr>
+  <br>
+
+  <div class="columns-2">
+    <p>Well, let me tell you something, ...</p>
+    <p class="break-before-column">Sure, go ahead, laugh...</p>
+    <p>Maybe we can live without...</p>
+    <p>Look. If you think this is...</p>
+  </div>
+
+  <span class="box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 text-white px-2">
+    Hello<br>
+    World
+  </span>
+  <div>
+    When controlling the flow of text, using the CSS property
+    <span class="inline">display: inline</span>
+    will cause the text inside the element to wrap normally.
+
+    While using the property <span class="inline-block">display: inline-block</span>
+    will wrap the element to prevent the text inside from extending beyond its parent.
+
+    Lastly, using the property <span class="block">display: block</span>
+    will put the element on its own line and fill its parent.
+  </div>
+</body>
+
+</html>
